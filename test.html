@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ретро-стиль игры</title>
+    <script src="snake.js" defer></script>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(25, 20px);
+            grid-template-rows: repeat(25, 20px);
+        }
+
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #333;
+        }
+
+        .empty {
+            background-color: #000;
+        }
+
+        .snake {
+            background-color: #00f;
+        }
+
+        .head {
+            background-color: #0f0;
+        }
+
+        .berry {
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid" id="game-grid">
+    </div>
+</body>
+</html>
