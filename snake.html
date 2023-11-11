@@ -16,7 +16,7 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(25, 20px);
-            grid-template-rows: repeat(25, 20px);
+            grid-template-rows: repeat(25, 20px);   
         }
 
         .cell {
@@ -40,10 +40,29 @@
         .berry {
             background-color: #f00;
         }
+
+        #score {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            position: absolute; 
+            top: 10%;
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        #joke {
+            color: #fff;
+
+        }
     </style>
 </head>
 <body>
     <div class="grid" id="game-grid">
     </div>
+    <br>
+    <div id="score">Score: 0</div>
+    <span id="joke"></span>
+
+
 </body>
 </html>
