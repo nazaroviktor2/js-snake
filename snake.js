@@ -41,7 +41,7 @@ class Cell {
         this.y = y
         this.type = type
     }
-    toSting(params) {
+    toSting() {
         return `<div class="cell ${this.type}" data-x="${this.x}" data-y="${this.y}"></div>`
     }
 }
@@ -54,7 +54,7 @@ for (let y = 0; y < gridSize; y++) {
 
 // добавляем змею
 cells[xyToIndex(...positions[0])].type = cellTypes.head
-cells[50].type = cellTypes.berry
+placeBerry()
 
 function render() {
     grid.innerHTML = ""
@@ -147,7 +147,7 @@ function dead_with_joke(){
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
     .then(response => response.json())
     .then(data => {
-         alert("dead\n" + data.joke);
+         alert("dead\n" +data.joke);
     })
     .catch(error => console.error('Error:', error));
 }
