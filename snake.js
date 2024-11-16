@@ -114,7 +114,7 @@ function move() {
 
     head = updatePostion(...head)
     if (check_dead(positions, head)){
-        dead_with_joke()
+        dead()
         clearInterval(intervalId)
     }
 
@@ -143,13 +143,9 @@ function handleKeyPress(event) {
 }
 
 
-function dead_with_joke(){
-    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
-    .then(response => response.json())
-    .then(data => {
-         alert("dead\n" +data.joke);
-    })
-    .catch(error => console.error('Error:', error));
+function dead(){
+    alert("dead\n Your score is" + score );
+
 }
 
 // Добавляем слушатель события нажатия клавиши к элементу
